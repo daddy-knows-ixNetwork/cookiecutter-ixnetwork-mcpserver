@@ -1,0 +1,25 @@
+services:
+  ixnetwork-mcp-server:
+    image: {{ cookiecutter.IXNETWORK_MCP_SERVER_IMAGE }}
+    container_name: ixnetwork-mcp-server
+
+    command:
+      - --accept-eula
+
+    ports:
+      - "{{ cookiecutter.IXNETWORK_MCP_HOST_PORT }}:8000"
+
+    environment:
+      IXNETWORK_MCP_ENABLE_TLS: "{{ cookiecutter.IXNETWORK_MCP_ENABLE_TLS }}"
+      IXNETWORK_MCP_LICENSE_SERVER: "{{ cookiecutter.IXNETWORK_MCP_LICENSE_SERVER }}"
+      PUBLIC_BASE_URL: "{{ cookiecutter.PUBLIC_BASE_URL }}"
+
+    volumes:
+      - ixnetwork-mcp-logs:/var/log/ixnetwork-mcp
+      - ixnetwork-mcp-data:/var/lib/ixnetwork-mcp
+
+    restart: "no"
+
+volumes:
+  ixnetwork-mcp-logs:
+  ixnetwork-mcp-data:

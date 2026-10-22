@@ -1,0 +1,14 @@
+{
+    "IXNETWORK_MCP_SERVER_IMAGE": "ixnetwork-mcp:26.0.0-147",
+    "IXNETWORK_MCP_HOST_PORT": "9966",
+    "IXNETWORK_MCP_HOST_IP": "172.21.191.86",
+    "IXNETWORK_MCP_ENABLE_TLS": "true",
+    "IXNETWORK_MCP_LICENSE_SERVER": "10.36.159.38",
+    "PUBLIC_BASE_URL": "https://{{ cookiecutter.IXNETWORK_MCP_HOST_IP }}:{{ cookiecutter.IXNETWORK_MCP_HOST_PORT }}",
+    "IXN_USERNAME": "admin",
+    "IXN_PASSWORD": "admin",
+    "project_name": "ixNetwork MCP Server Docker Compose",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('.', '_') }}",
+    "project_short_description": "A cookiecutter template for IxNetwork MCP Server",
+    "first_version": "0.1.0"
+}

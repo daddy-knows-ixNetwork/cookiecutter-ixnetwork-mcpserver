@@ -1,0 +1,8 @@
+{
+	"mcpServers": {
+		"IxNetwork-MCP-Server": {
+			"url": "{{ cookiecutter.PUBLIC_BASE_URL }}/sse",
+			"type": "sse"
+		}
+	}
+}
